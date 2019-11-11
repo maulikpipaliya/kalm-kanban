@@ -1,0 +1,11 @@
+@import '1_helpers.css';
+@import '2_base.css';
+@import '3_layout.css';
+@import '4_modules.css';
+
+*{  
+    background-color: var(--clr-bg);
+    margin: 0;
+    padding: 0;
+}
+

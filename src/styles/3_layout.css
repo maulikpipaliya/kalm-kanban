@@ -1,0 +1,59 @@
+/* 
+    Header
+*/
+
+.kk-header{
+    color: var(--text-color);
+    padding: 10px;
+    box-shadow:0px 1px 10px white;
+}
+
+.kk-header-logo{
+    display: inline-block;
+    padding: 5px 10px;
+    /* border: 1px solid var(--color2) ; */
+    margin: 1% 10%;
+    
+    /* logo designing */
+    font-weight: bolder;
+    letter-spacing: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+
+}
+
+.kk-header-links{
+    float: right;
+    display: inline-block;
+    margin-right: 10%;
+    margin-top: 1%;
+    
+}
+
+.kk-header-link{
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+
+/*
+    Columns
+
+*/
+
+.kk-column-container{
+    border: 1px solid white;
+    padding: 25px;
+    margin: 15px; 
+    width: 700px;
+}
+
+.kk-column{
+    background-color: var(--clr-gray);
+    width: 20%;
+    min-height: 150px; 
+
+}
