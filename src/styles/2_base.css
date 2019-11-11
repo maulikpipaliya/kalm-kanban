@@ -1,8 +1,21 @@
 /* Fonts */
 
 @import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 *{
     font-family: var(--base-font);
+
 }
+
+
+i,span{
+    background-color: inherit;
+}
+
+input{
+    background-color: inherit;
+}
+
+
 

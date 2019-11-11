@@ -5,8 +5,9 @@
 
     /* global variables  */
     --clr-bg : #24252A;
-    --clr-gray : #EDEDED;
+    --clr-gray : #e3e4e6;
     --text-color : #edf0f1;
+    --clr-white: white;
     --base-font : 'PT Sans', sans-serif;
 
 }
