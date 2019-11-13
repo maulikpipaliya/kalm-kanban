@@ -3,7 +3,7 @@
 @import '3_layout.css';
 @import '4_modules.css';
 
-*{  
+body{  
     background-color: var(--clr-bg);
     margin: 0;
     padding: 0;

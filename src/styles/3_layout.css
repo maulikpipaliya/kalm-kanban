@@ -20,6 +20,7 @@
     letter-spacing: 5px;
     font-size: 1.2em;
     cursor: pointer;
+    user-select: none;
 
 }
 
@@ -46,11 +47,13 @@
 */
 
 .kk-column-container{
-    border: 1px solid white;
+    
+    /* border: 1px solid white; */
     padding: 2%;
     margin: 1%;
     max-width: 100%;
     justify-content: center;
+    
 }
 
 .kk-column{
@@ -60,13 +63,15 @@
     min-height: 150px;
     /* padding: 1%; */
     margin: 1%;
-    padding: 10px 0px 0px 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+
+    font-size: x-small;
 }
 
 .kk-column-tr-opt{
-    background-color: inherit;
     float: right;
-    margin-right: 10px;
+    margin-right: 5%;
     cursor: pointer;
 }
 
@@ -75,8 +80,11 @@
     background-color: var(--clr-white);
     margin: 15px 0px;
     border-radius: 5px;
-    width: 90%;
+    width: 95%;
     padding: 2%;
+    min-height: 30px;
+    
+
 }
 
 .kk-column-add-task{
@@ -99,13 +107,30 @@
 }
 
 .kk-column-add-task-tb-ip{
+    resize: none;
     height: 40px;
     border-radius: 5px;
-    width: 90%;
+    width: 95%;
     padding: 2%;
     background-color: var(--clr-white);
 }
 
+
 .kk-column-add-task-tb-btn-add, .kk-column-add-task-tb-btn-cancel{
-    float: right;
+    width: 49%;
+    padding: 5px 0px;
+    border-radius: 5px;
+    
 }
+
+.kk-column-add-task-tb-btn-add{
+    background-color: green;
+    border: 1px solid var(--clr-bg);
+}
+
+.kk-column-add-task-tb-btn-cancel{
+    background-color: white;
+    border: 1px solid gray;
+}
+
+
