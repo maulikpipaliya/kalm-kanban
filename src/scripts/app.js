@@ -42,9 +42,15 @@ $(document).ready(function() {
         
         $(this).parent().prev().remove(); // 
         $(this).parent().remove();
-        }
+        }   
 
     });
 
+    $(document).on("click",".kk-column-add-task-tb-btn-cancel", function(){
+        console.log("btn-cancel is clicked.")
+
+        $(this).parent().prev().remove();
+        $(this).parent().remove();
+    });
 }); //Last line of code, document.ready
 
