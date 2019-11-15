@@ -52,5 +52,64 @@ $(document).ready(function() {
         $(this).parent().prev().remove();
         $(this).parent().remove();
     });
+
+
+    
+
+
+    
+
+
+    // Drag and drop manipulation - pure JS
+
+    const columnTasks = document.querySelectorAll('.kk-column-task');
+    const columns = document.querySelectorAll('.kk-column');    
+    console.log(columnTasks);
+
+    var dragTask = null;
+
+
+    for(i = 0 ; i < columnTasks.length; i++){
+        const task = columnTasks[i];
+        
+        task.addEventListener('dragstart', function(e){
+            console.log("DragStart");
+            dragTask = task;
+            setTimeout(() => {
+                task.style.display = "none";
+            }, 0);
+            // task.style.display = "none";
+        });
+
+        task.addEventListener('dragend', function(){
+            console.log("DragEnd");
+            task.style.display = "block";
+            dragTask = null;
+        });
+    }
+
+    for(j = 0 ; j < columns.length; j++){
+        const column = columns[j];
+
+        column.addEventListener('dragover', function(e){
+            e.preventDefault()
+        });
+
+        column.addEventListener('dragenter', function(e){
+            e.preventDefault();
+        });
+
+        column.addEventListener('drop', function(){
+            console.log('DropStart')
+            column.append(dragTask);
+        });
+    }
+
+
 }); //Last line of code, document.ready
 
+
+function drag(e){
+    // e.dataTransfer.setData("Lolwa", e.target.id);
+    console.log(e);
+}

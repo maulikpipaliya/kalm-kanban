@@ -47,8 +47,7 @@
 */
 
 .kk-column-container{
-    
-    /* border: 1px solid white; */
+    border: 1px solid white;
     padding: 2%;
     margin: 1%;
     max-width: 100%;
@@ -57,10 +56,10 @@
 }
 
 .kk-column{
-    display: inline-block;
+    display: inline-table;
     background-color: var(--clr-gray);
-    width: 21%;
-    min-height: 150px;
+    width: 20%;
+    min-height: 350px;
     /* padding: 1%; */
     margin: 1%;
     padding: 10px 15px;
