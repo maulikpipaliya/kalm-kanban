@@ -92,7 +92,7 @@ $(document).ready(function() {
         const column = columns[j];
 
         column.addEventListener('dragover', function(e){
-            e.preventDefault()
+            e.preventDefault();
         });
 
         column.addEventListener('dragenter', function(e){
