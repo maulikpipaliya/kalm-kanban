@@ -24,6 +24,8 @@ $(document).ready(function() {
         $this.after(htmlAddCancelBtns);
         var $copyOfThis = $this;
         $this.remove();
+        $(".kk-column-add-task").css({"display":"none"});
+        
     });
 
 
@@ -38,19 +40,34 @@ $(document).ready(function() {
         else{
             var html = `<div class="kk-column-task">`+text+`</div>`;
         
-        $(this).parent().prev().before(html);
-        
-        $(this).parent().prev().remove(); // 
-        $(this).parent().remove();
+        // $(this).parent().prev().after(html);
+
+        // console.log($(document).find(".kk-column-task:first"));
+        $(document).find(".kk-column-task:first").before(html);
+
+        $(".kk-column-add-task").css({"display":"block"});
+        $('.kk-column-add-task-tb, .kk-column-add-cancel-task-btns').css({
+            "display":"none"
+        })
+            
+        // $(this).parent().prev().remove(); // 
+        // $(this).parent().remove();
         }   
 
     });
 
     $(document).on("click",".kk-column-add-task-tb-btn-cancel", function(){
         console.log("btn-cancel is clicked.")
+        $(".kk-column-add-task").css({"display":"block"});
+        
+        $('.kk-column-add-task-tb, .kk-column-add-cancel-task-btns').css({
+            "display":"none"
+        })
+        
 
-        $(this).parent().prev().remove();
-        $(this).parent().remove();
+        
+        // $(this).parent().prev().remove();
+        // $(this).parent().remove();
     });
 
 
