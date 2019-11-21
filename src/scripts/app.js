@@ -25,7 +25,7 @@ $(document).ready(function () {
         $this.after(htmlAddCancelBtns);
         var $copyOfThis = $this;
         $this.remove();
-        $(".kk-column-add-task").css({ "display": "none" });
+        // $(".kk-column-add-task").css({ "display": "none" });
 
     });
 
@@ -44,17 +44,22 @@ $(document).ready(function () {
             var html = `<div class="kk-column-task" draggable="true">` + text + `</div>`;
 
             // $(this).parent().prev().after(html);
+            console.log("Add task clicked");
+            console.log("Column :");
 
+            var curColumn = $(this).parents().closest(".kk-column");
+            
             // console.log($(document).find(".kk-column-task:first"));
-            $(document).find(".kk-column-task:first").before(html);
-
+            // $(document).find(".kk-column-task:first").before(html);
+            var addedTask = $(this).parent().next(".kk-column-add-task").after(html);
             $(".kk-column-add-task").css({ "display": "block" });
             $('.kk-column-add-task-tb, .kk-column-add-cancel-task-btns').css({
                 "display": "none"
             })
 
-            var task = $(document).find(".kk-column-task:first");
-            console.log("added task is");
+            // var task = $(document).find(".kk-column-task:first");
+            var task = $(this).parents().nextAll(".kk-column-task");
+            console.log("Added task is");
             
             console.log(task[0]); //task returns jQ obj, task[0] returns HTML DOM Obj
             taskAEL(task[0]);
@@ -104,9 +109,9 @@ function addEventListenersToTasks() {
     var dragTask = null;
     for (i = 0; i < columnTasks.length; i++) {
         const task = columnTasks[i];
-        console.log("haha");
-        console.log(task);
-        console.log("lolwa");
+        // console.log("haha");
+        // console.log(task);
+        // console.log("lolwa");
         taskAEL(task);
     }
 
